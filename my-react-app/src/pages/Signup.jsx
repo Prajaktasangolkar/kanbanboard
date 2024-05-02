@@ -45,7 +45,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/signup', {
+      const response = await fetch('http://localhost:8000/controller/user/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ const Signup = () => {
 
       const data = await response.json();
       localStorage.setItem('token', data.token);
-      navigate('/');
+      navigate('/login');
     } catch (error) {
       console.error('Signup error:', error);
       // Handle error messages if needed
