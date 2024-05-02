@@ -29,7 +29,7 @@ function Task({ task, index }) {
     <Draggable draggableId={`${task.id}`} key={task.id} index={index}>
       {(provided, snapshot) => (
         <Container
-        {...provided.droppableProps}
+        {...provided.draggableProps}
         {...provided.dragHandleProps}
         ref={provided.innerRef}
         isDragging={snapshot.isDragging}
