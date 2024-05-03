@@ -59,7 +59,7 @@ const Signup = () => {
 
       const data = await response.json();
       localStorage.setItem('token', data.token);
-      navigate('/login');
+      navigate('/');
     } catch (error) {
       console.error('Signup error:', error);
       // Handle error messages if needed
@@ -70,6 +70,14 @@ const Signup = () => {
 
   return (
     <>
+    <div style={{    
+       fontSize: '60px',
+       fontWeight: 'bold',
+       justifyContent: 'center',
+       alignItems: 'center',
+       display: 'flex',
+       flexDirection: 'column'
+       }}>
       <Box
         component='form'
         sx={{ mt: 1 }}
@@ -129,6 +137,7 @@ const Signup = () => {
       >
         Already have an account? Login
       </Button>
+      </div>
     </>
   );
 };

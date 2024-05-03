@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Button, TextField } from '@mui/material'
+import { Box, Button, TextField, styled } from '@mui/material'
 import { Link, useNavigate } from 'react-router-dom'
 import LoadingButton from '@mui/lab/LoadingButton'
 
@@ -48,7 +48,7 @@ const Login = () => {
 
       const resData = await response.json();
       localStorage.setItem('token', resData.token);
-      navigate('/');
+      navigate('/boards');
     } catch (error) {
       console.error('Login error:', error);
       setUsernameErrText('Invalid credentials');
@@ -61,13 +61,27 @@ const Login = () => {
 
   return (
     <>
+    <div style={{    
+       fontSize: '60px',
+       fontWeight: 'bold',
+       justifyContent: 'center',
+       alignItems: 'center',
+       display: 'flex',
+       flexDirection: 'column'
+       }}>
       <Box
+    style={{}}
         component='form'
         sx={{ mt: 1 }}
         onSubmit={handleSubmit}
         noValidate
       >
         <TextField
+       style={{
+        height: '60px',
+        fontSize: '44px',
+        
+      }}
           margin='normal'
           required
           fullWidth
@@ -108,6 +122,7 @@ const Login = () => {
       >
         Don't have an account? Signup
       </Button>
+      </div>
     </>
   )
 }
