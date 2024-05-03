@@ -1,4 +1,10 @@
 
 #output
-https://github.com/Prajaktasangolkar/kanbanboard/assets/109715943/ab141951-f3f3-4aa9-afcd-dfdd8a4888a6
+
+
+
+
+https://github.com/Prajaktasangolkar/kanbanboard/assets/109715943/76892ed9-af12-4332-a08f-4dcf09a03731
+
+
 
